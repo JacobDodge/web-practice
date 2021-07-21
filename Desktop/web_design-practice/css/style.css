@@ -1,0 +1,129 @@
+
+/*-------Base Styles-------*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: lightsteelblue;
+}
+
+.logo {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem;
+    
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    margin: 2rem 2rem 5rem 2rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.main-nav li {
+    background-color:rgb(135, 189, 147);
+    margin: .25rem;
+    padding: .75rem;
+    border-radius: .5rem;
+    height: 3rem;
+}
+
+.main-nav {
+    width: 300px;
+}
+
+.wrapper,
+.main-header,
+.main-nav,
+.card,
+body
+ {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    
+}
+
+.main-header {
+    color: rgba(240, 248, 243, 0.966);
+    background-color: darkslategrey;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+
+.main-nav,
+.logo,
+h1,
+h2,
+footer {
+    align-self: center;
+}
+
+body {
+    font-size: 1.25rem;
+    letter-spacing: .09rem;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+footer {
+    margin-top: auto;
+    background-color: lightsteelblue;
+    font-size: .9rem;
+}
+/*-------Layout Styles-------*/
+
+.wrapper {
+    flex-direction: column;
+}
+
+.card {
+    margin: 5rem auto;
+    padding: .75rem;
+    border-radius: 1rem;
+    box-shadow: 0px 3px 17px 0px rgba(0,0,0,0.67);
+    -webkit-box-shadow: 0px 3px 17px 0px rgba(0,0,0,0.67);
+    -moz-box-shadow: 0px 3px 17px 0px rgba(0,0,0,0.67);
+    align-self: center;
+    width: 70%;
+    background-color: rgb(135, 189, 147);
+}
+
+/*-------Media Queries-------*/
+
+@media screen and (min-width: 769px) {
+    .main-header,
+    .main-nav {
+        flex-direction: row;
+        flex-grow: 1;
+        justify-content: space-between;
+        
+    }
+    .main-header {
+        padding: 2rem;
+    }
+    .main-nav {
+        justify-content: flex-end;;
+    }
+    ul {
+        display:flex;
+        flex-direction: row;
+        justify-self: flex-end;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .card {
+        flex-flow: row wrap;
+        width: 80%;
+    }
+}
